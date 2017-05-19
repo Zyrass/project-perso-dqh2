@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>App DQH2 FR</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- css bootstrap -->
+        <link rel="stylesheet" type="text/css" href="../../../Public/www/Views/vendor/bootstrap/css/bootstrap.min.css">
+        <!-- font-awesome -->
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- css perso -->
+        <link rel="stylesheet" type="text/css" href="../../../Public/www/Views/vendor/css/myStyle.css">
+        <!-- fonts google -->
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Comfortaa|Lato:300">
+
+        <!-- style pour éviter d'avoir un problème avec la navbar -->
+        <style>
+            body { 
+                padding-top: 50px;
+                padding-bottom: 20px;
+            }
+        </style>
+        <!-- Style Navbar Multi-niveau -->
+        <style>
+            .dropdown-submenu{position:relative;}
+            .dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+            .dropdown-submenu:hover>.dropdown-menu{display:block;}
+            .dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#cccccc;margin-top:5px;margin-right:-10px;}
+            .dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
+        </style>
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- En-tête commune de l'application -->
+        <?php include_once 'inc/nav.php'; ?>
+        <hr>
+        
+        <!-- Code Généré via le template phtml -->
+        <main>
+            <!-- Chargement du template PHTML spécifié par le programme PHP -->
+            <?php include '../../../App/Zyrass/Controllers/' . $template . '.phtml'; ?>
+        </main>
+
+
+        <hr>
+        <!-- Pied de page commun de l'application -->
+        <footer>
+            test footer
+        </footer>
+
+        <!-- script jquery-->
+        <script src="../../../Public/www/Views/vendor/js/jquery/jquery-3.2.1.min.js"></script>
+        <!-- script bootstrap -->
+        <script src="../../../Public/www/Views/vendor/bootstrap/js/bootstrap.min.js"></script>
+        <!-- script perso -->
+        <script src="../../../Public/www/Views/vendor/js/my-script.js"></script>
+    </body>
+</html>
