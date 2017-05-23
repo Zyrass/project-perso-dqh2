@@ -1,0 +1,30 @@
+<!-- Page d'accueil -->
+<div class="jumbotron">
+    <h2 class="text-center text-warning">Les ingrédients</h2>
+    <hr>
+    <h3><small>Nombre d'ingrédients enregistrés : 106/106 (100%)</h3>
+</div>
+
+<div class="container-fluid" style="margin-top: 40px">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div>
+                <table class="table table-bordered table-hover table-condensed">
+                    <caption>Tableau récapitulatif des ingrédients du jeu</caption>
+                    <thead>
+                        <tr>
+                            <th>Nom</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($info_ingredients as $value) : ?>
+                            <tr>
+                                <td><?= $value['name']; ?></td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,67 @@
+<!-- Page d'accueil -->
+<div class="jumbotron">
+    <h2 class="text-center text-warning">Combien de monstres faut-il tuer ?</h2>
+</div>
+
+<div class="container-fluid" style="margin-top: 40px">
+    <div class="row">
+        <div class="col-xs-10 col-xs-offset-1">
+            <div>
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a href="#a-m" aria-controls="a-m" role="tab" data-toggle="tab">A à M</a></li>
+                    <li role="presentation"><a href="#n-z" aria-controls="n-z" role="tab" data-toggle="tab">N à Z</a></li>
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+                    <!-- Ingrédient de A à M -->
+                    <div role="tabpanel" class="tab-pane active" id="a-m">
+                        <div>
+                            <table class="table table-bordered table-hover table-condensed">
+                                <caption>Tableau récapitulatif des ingrédients obtenu sur les monstres</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Nom de la ressource</th>
+                                        <th>Nom du monstre</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($info_mobs_ingredients_one as $value) : ?>
+                                        <tr>
+                                            <td><?= $value['name_ingredient']; ?></td>
+                                            <td><?= $value['name_monstre']; ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Ingrédient de N à Z -->
+                    <div role="tabpanel" class="tab-pane" id="n-z">
+                        <div>
+                            <table class="table table-bordered table-hover table-condensed">
+                                <caption>Tableau récapitulatif des monstres avec 10 kills</caption>
+                                <thead>
+                                    <tr>
+                                        <th>Nom</th>
+                                        <th>Quantités</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($info_mobs_ingredients_two as $value) : ?>
+                                        <tr>
+                                            <td><?= $value['name_ingredient']; ?></td>
+                                            <td><?= $value['name_monstre']; ?></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

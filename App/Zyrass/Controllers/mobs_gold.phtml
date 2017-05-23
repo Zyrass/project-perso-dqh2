@@ -1,0 +1,23 @@
+<!-- Page d'accueil -->
+<div class="jumbotron">
+    <h2 class="text-center text-warning">Or par monstres</h2>
+</div>
+<div>
+    <table class="table table-bordered table-hover table-condensed">
+        <caption>Tableau récapitulatif des monstres avec l'or associé</caption>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Gold</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php foreach ($info_mobs_gold as $value) : ?>
+                <tr>
+                    <td><?= $value['name']; ?></td>
+                    <td><?= $value['gold']; ?></td>
+                </tr>
+            <?php endforeach; ?>
+        </tbody>
+    </table>
+</div>

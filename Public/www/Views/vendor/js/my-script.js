@@ -10,4 +10,14 @@ $(document).ready(function() {
         jQuery(this).find('.jqueryFadeIn').stop(true, true).delay(200).fadeOut();
     });
 
+/*
+ |-------------------------------------------------------------------------------------
+ | Tabulation pour la quantité des mobs à kill
+ |-------------------------------------------------------------------------------------
+ */   
+    $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+    })
+
 }); // Fin de jquery

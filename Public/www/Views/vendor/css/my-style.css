@@ -1,0 +1,27 @@
+html {
+  font-size: 62.5%; }
+
+h1, h2, h3, h4, h5, h6, th, tr, caption {
+  text-align: center; }
+
+.jumbotron {
+  margin-bottom: 20px auto; }
+
+#presentation {
+  margin: 0 auto;
+  padding: 10px; }
+  #presentation p:first-letter {
+    font-size: 2Rem; }
+  #presentation p {
+    word-spacing: 0.2px;
+    letter-spacing: 1px; }
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: #eee;
+  height: 50px;
+  line-height: 50px; }
+
+/*# sourceMappingURL=my-style.css.map */
