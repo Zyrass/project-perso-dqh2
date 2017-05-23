@@ -61,6 +61,7 @@
                         <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille du Bois des charmes</span></a></li>
                         <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la Grande faille : nord</span></a></li>
                         <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la Grande faille : sud</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille du mont Névé</span></a></li>
                         <li role="separator" class="divider"></li>
                     </ul>
                 </li>

@@ -41,20 +41,27 @@
         <![endif]-->
 
         <!-- En-tête commune de l'application -->
-        <?php include_once 'inc/nav.php'; ?>
-        <hr>
+        
         
         <!-- Code Généré via le template phtml -->
         <main>
-            <!-- Chargement du template PHTML spécifié par le programme PHP -->
-            <?php include '../../../App/Zyrass/Controllers/' . $template . '.phtml'; ?>
+            <!-- Chargement du template PHTML spécifié par le programme PHP seulon une condition pré-établi-->
+            <?php
+                if ($template === 'forbidden' || $template === 'notfound' || $template === 'servererror') 
+                {
+                    include '../../../../App/Zyrass/Controllers/Errors/' . $template . '.phtml';
+                } else {
+                    include 'inc/nav.php';
+                    include '../../../App/Zyrass/Controllers/' . $template . '.phtml';
+                }
+            ?>
         </main>
 
 
         <hr>
         <!-- Pied de page commun de l'application -->
-        <footer>
-            test footer
+        <footer class="text-center">
+            <small>Toutes les informations appartiennent à Square-Enix</small>
         </footer>
 
         <!-- script jquery-->

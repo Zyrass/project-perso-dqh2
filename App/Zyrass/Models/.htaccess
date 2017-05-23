@@ -1,0 +1,15 @@
+# Cacher le contenu du répertoire
+    Options -Indexes
+# Ignorer lors de l'affichage d'une README par exemple. Un readme peut être généré avec github inutile de le montrer aux visiteurs.
+  #  IndexIgnore README *.gif
+# Définir un mot de passe pour ce répertoire. (Généralement ce sera le dossier admin).
+    # Ce texte sera affiché lors de la saisie du mot de passe.
+ ##   AuthName "domaine-autorisé"
+ ##   AuthType Basic
+    # Le chemin d'accès vers le fichier texte contenant les noms d'utilisateurs et mots de passe
+ ##   AuthUserFile /home/myself/private/stuff.pw
+ ##   Require valid-user
+# Redirection vers une page d'erreur personalisé :
+    ErrorDocument 404 http://perso.dev:8090/project-perso-dqh2/App/Zyrass/Models/Errors/notfound.php
+    ErrorDocument 403 http://perso.dev:8090/project-perso-dqh2/App/Zyrass/Models/Errors/forbidden.php
+    ErrorDocument 500 http://perso.dev:8090/project-perso-dqh2/App/Zyrass/Models/Errors/servererror.php
