@@ -17,7 +17,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cubes" aria-hidden="true"></i> - Armes / Orbes / Accessoires<span class="caret"></span></a>
                     <ul class="dropdown-menu jqueryFadeIn">
-                        <li class="dropdown-header text-right">Tableau sur chaque type d'objets + effets</li>
+                        <li class="dropdown-header text-right">Chaque type d'objets + effets</li>
                         <li class="divider"></li>
                         <li><a href="../../../App/Zyrass/Models/arms.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Les armes</span></a></li>
                         <li><a href="../../../App/Zyrass/Models/orbs.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Les orbes</span></a></li>
@@ -31,37 +31,37 @@
                     <ul class="dropdown-menu jqueryFadeIn">
                         <li class="dropdown-header text-right">Tableau sur chaque zone du début</li>
                         <li class="divider"></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Plaine verdoyante</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Déserg</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Bois des charmes</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Passe rouge</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Terres brûlées</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Contreforts de givre</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/plaine_verdoyante.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Plaine verdoyante</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/deserg.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Déserg</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bois_charmes.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Bois des charmes</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/passe_rouge.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Passe rouge</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/terres_brulees.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Terres brûlées</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/givre.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Contreforts de givre</span></a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header text-right">Tableau sur chaque zone sinistré</li>
                         <li class="divider"></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La Plaine sinistré</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Les Dunes damnées</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Le Bois ténébreux</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">A la Passe noire</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Aux terres mortes</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Contreforts de givre funèbre</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/plaine_sinistre.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La Plaine sinistré</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/dunes_damnees.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Les Dunes damnées</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bois_tenebreux.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Le Bois ténébreux</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/passe_noire.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">A la Passe noire</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/terres_mortes.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Aux terres mortes</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/givre_funebre.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Contreforts de givre funèbre</span></a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header text-right">Tableau des batailles accessible chez Gragon</li>
                         <li class="divider"></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de Nautys</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de Dunis</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille d'Ingénia</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille d'Accordia</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la tour : base</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la tour : centre</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_nautys.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de Nautys</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_dunis.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de Dunis</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_ingenia.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille d'Ingénia</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_accordia.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille d'Accordia</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_tour_b.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la tour : base</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_tour_c.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la tour : centre</span></a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header text-right">Tableau des autres batailles</li>
                         <li class="divider"></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille du Bois des charmes</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la Grande faille : nord</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la Grande faille : sud</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/profil.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille du mont Névé</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_bois_charme.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille du Bois des charmes</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_grande_faille_nord.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la Grande faille : nord</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_grande_faille_sud.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille de la Grande faille : sud</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/bataille_neve.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La bataille du mont Névé</span></a></li>
                         <li role="separator" class="divider"></li>
                     </ul>
                 </li>
@@ -93,10 +93,6 @@
                         <li role="separator" class="divider"></li>
                     </ul>
                 </li>
-                
-                <li><a href="#"><i class="fa fa-shopping-cart" aria-hidden="true"></i> - Se procurer le jeu</a></li>
-                <li><a href="#"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> - Remerciement</a></li>
-                <li><a href="#"><i class="fa fa-info" aria-hidden="true"></i> - Qui suis-je ?</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
