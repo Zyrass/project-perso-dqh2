@@ -1,6 +1,6 @@
 <!-- Page d'accueil -->
 <div class="jumbotron">
-    <h3 class="text-center text-warning">La bataille d'Ingénia</h3>
+    <h3 class="text-center text-warning">La bataille du Bois des charmes</h3>
 </div>
 
 <div class="container-fluid" style="margin-top: 40px">
@@ -19,23 +19,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($info_bataille_ingenia as $value) : ?>
+                        <?php foreach ($info_bataille_bois_charme as $value) : ?>
                             <tr>
                                 <td><?= $value['nom_monstre']; ?></td>
-                                <td><?php 
-                                    if($value['nom_monstre'] != "Tyrantosaure" && $value['search'] == 1) 
+                                <td><?php
+                                    if($value['search'] == 1)
                                     { 
                                         echo "Oui";
-                                    } else {
-                                        echo "<span class='text-danger'>Boss</span>";
                                     }
                                 ?></td>
-                                <td><?php 
-                                    if($value['nom_monstre'] != "Tyrantosaure" && $value['medals'] == 1) 
-                                    { 
+                                <td><?php
+                                    if($value['medals'] == 1)
+                                    {
                                         echo "Oui";
-                                    } else {
-                                        echo "<span class='text-danger'>Boss</span>";
                                     }
                                 ?></td>
                                 <td><?= $value['exp']; ?></td>

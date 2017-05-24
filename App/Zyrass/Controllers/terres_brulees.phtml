@@ -1,12 +1,17 @@
 <!-- Page d'accueil -->
 <div class="jumbotron">
-    <h3 class="text-center text-warning">La bataille d'Ingénia</h3>
+    <h3 class="text-center text-warning">Terres brûlées</h3>
 </div>
 
 <div class="container-fluid" style="margin-top: 40px">
     <div class="row">
         <div class="col-xs-10 col-xs-offset-1">
             <div>
+                <div class="alert alert-warning">
+                    <h4>À savoir</h4>
+                    <p><span class="text-danger">Boss</span> : En fuite + médaille mais pas ici</p>
+                    <p><span class="text-danger">/</span> : Rien</p>
+                </div>
                 <table class="table table-bordered table-hover table-condensed">
                     <caption>Les monstres de la zone</caption>
                     <thead>
@@ -19,23 +24,25 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($info_bataille_ingenia as $value) : ?>
+                        <?php foreach ($info_terres_brulees as $value) : ?>
                             <tr>
                                 <td><?= $value['nom_monstre']; ?></td>
-                                <td><?php 
-                                    if($value['nom_monstre'] != "Tyrantosaure" && $value['search'] == 1) 
+                                <td><?php
+                                    if($value['nom_monstre'] == "Roi maudit" || $value['nom_monstre'] == "Shivattak" && $value['search'] == 1)
                                     { 
-                                        echo "Oui";
-                                    } else {
                                         echo "<span class='text-danger'>Boss</span>";
+                                    } else {
+                                        echo "Oui";
                                     }
                                 ?></td>
-                                <td><?php 
-                                    if($value['nom_monstre'] != "Tyrantosaure" && $value['medals'] == 1) 
-                                    { 
-                                        echo "Oui";
-                                    } else {
+                                <td><?php
+                                    if($value['nom_monstre'] == "Roi maudit" || $value['nom_monstre'] == "Shivattak" && $value['medals'] == 1)
+                                    {
                                         echo "<span class='text-danger'>Boss</span>";
+                                    }
+                                    else
+                                    {
+                                        echo "Oui";
                                     }
                                 ?></td>
                                 <td><?= $value['exp']; ?></td>

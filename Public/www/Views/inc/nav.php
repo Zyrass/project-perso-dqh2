@@ -33,10 +33,10 @@
                         <li class="divider"></li>
                         <li><a href="../../../App/Zyrass/Models/plaine_verdoyante.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Plaine verdoyante</span></a></li>
                         <li><a href="../../../App/Zyrass/Models/deserg.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Déserg</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/bois_charmes.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Bois des charmes</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/foret_madrier.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">La forêt des Madriers</span></a></li>
                         <li><a href="../../../App/Zyrass/Models/passe_rouge.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Passe rouge</span></a></li>
                         <li><a href="../../../App/Zyrass/Models/terres_brulees.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Terres brûlées</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/givre.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Contreforts de givre</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/contreforts_givre.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Contreforts de givre</span></a></li>
                         <li role="separator" class="divider"></li>
                         <li class="dropdown-header text-right">Tableau sur chaque zone sinistré</li>
                         <li class="divider"></li>

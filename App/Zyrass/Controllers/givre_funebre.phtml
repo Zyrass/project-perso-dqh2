@@ -1,6 +1,6 @@
 <!-- Page d'accueil -->
 <div class="jumbotron">
-    <h3 class="text-center text-warning">La bataille d'Ingénia</h3>
+    <h3 class="text-center text-warning">Contreforts du givre funèbre</h3>
 </div>
 
 <div class="container-fluid" style="margin-top: 40px">
@@ -19,23 +19,35 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <?php foreach ($info_bataille_ingenia as $value) : ?>
+                        <?php foreach ($info_givre_funebre as $value) : ?>
                             <tr>
                                 <td><?= $value['nom_monstre']; ?></td>
-                                <td><?php 
-                                    if($value['nom_monstre'] != "Tyrantosaure" && $value['search'] == 1) 
+                                <td><?php
+                                    if($value['nom_monstre'] == "Mékanotimbré" && $value['search'] == 1)
                                     { 
-                                        echo "Oui";
-                                    } else {
                                         echo "<span class='text-danger'>Boss</span>";
+                                    } 
+                                    elseif($value['nom_monstre'] == "Sculpture de glace" && $value['search'] == 0 )
+                                    {
+                                        echo "<span class='text-danger'>/</span>";
+                                    }
+                                    else
+                                    {
+                                        echo "Oui";
                                     }
                                 ?></td>
-                                <td><?php 
-                                    if($value['nom_monstre'] != "Tyrantosaure" && $value['medals'] == 1) 
-                                    { 
-                                        echo "Oui";
-                                    } else {
+                                <td><?php
+                                    if($value['nom_monstre'] == "Mékanotimbré" && $value['medals'] == 1)
+                                    {
                                         echo "<span class='text-danger'>Boss</span>";
+                                    } 
+                                    elseif($value['nom_monstre'] == "Sculpture de glace" || $value['nom_monstre'] == "Dragon bleu" && $value['medals'] == 0)
+                                    {
+                                        echo "<span class='text-danger'>/</span>";
+                                    }
+                                    else
+                                    {
+                                        echo "Oui";
                                     }
                                 ?></td>
                                 <td><?= $value['exp']; ?></td>

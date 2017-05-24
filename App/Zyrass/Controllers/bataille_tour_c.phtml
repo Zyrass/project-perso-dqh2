@@ -11,13 +11,31 @@
                     <caption>Les monstres de la zone</caption>
                     <thead>
                         <tr>
-                            <th>Nom du monstre</th>
+                            <th>Monstre</th>
+                            <th>Rech.</th>
+                            <th>Médail.</th>
+                            <th>Exp</th>
+                            <th>OR</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($info_bataille_tour_centre as $value) : ?>
                             <tr>
                                 <td><?= $value['nom_monstre']; ?></td>
+                                <td><?php 
+                                    if($value['search'] == 1) 
+                                    { 
+                                        echo "Oui";
+                                    }
+                                ?></td>
+                                <td><?php 
+                                    if($value['medals'] == 1) 
+                                    { 
+                                        echo "Oui";
+                                    }
+                                ?></td>
+                                <td><?= $value['exp']; ?></td>
+                                <td><?= $value['or']; ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>

@@ -11,13 +11,35 @@
                     <caption>Les monstres de la zone</caption>
                     <thead>
                         <tr>
-                            <th>Nom du monstre</th>
+                            <th>Monstre</th>
+                            <th>Rech.</th>
+                            <th>Médail.</th>
+                            <th>Exp</th>
+                            <th>OR</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach ($info_bataille_accordia as $value) : ?>
                             <tr>
                                 <td><?= $value['nom_monstre']; ?></td>
+                                <td><?php 
+                                    if($value['nom_monstre'] != "Tyrantosaure" && $value['search'] == 1) 
+                                    { 
+                                        echo "Oui";
+                                    } else {
+                                        echo "<span class='text-danger'>Boss</span>";
+                                    }
+                                ?></td>
+                                <td><?php 
+                                    if($value['nom_monstre'] != "Tyrantosaure" && $value['medals'] == 1) 
+                                    { 
+                                        echo "Oui";
+                                    } else {
+                                        echo "<span class='text-danger'>Boss</span>";
+                                    }
+                                ?></td>
+                                <td><?= $value['exp']; ?></td>
+                                <td><?= $value['or']; ?></td>
                             </tr>
                         <?php endforeach; ?>
                     </tbody>
