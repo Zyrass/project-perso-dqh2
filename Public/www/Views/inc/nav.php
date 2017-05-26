@@ -81,13 +81,13 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-leaf" aria-hidden="true"></i> - Ingrédiants / Expérience / Or<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-leaf" aria-hidden="true"></i> - Ingrédients / Expérience / Or<span class="caret"></span></a>
                     <ul class="dropdown-menu jqueryFadeIn">
-                        <li class="dropdown-header text-right">Tableau en rapports avec les ingrédiants</li>
+                        <li class="dropdown-header text-right">Tableau en rapports avec les ingrédients</li>
                         <li class="divider"></li>
-                        <li><a href="../../../App/Zyrass/Models/ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">ingrédiants</span>  au complet</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">ingrédients</span>  au complet</span></a></li>
                         <li role="separator" class="divider"></li>
-                        <li><a href="../../../App/Zyrass/Models/mobs_ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary"><span class="text-warning">Ingrédiants</span> par monstre</span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/mobs_ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary"><span class="text-warning">Ingrédients</span> par monstre</span></a></li>
                         <li><a href="../../../App/Zyrass/Models/mobs_xp.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary"><span class="text-warning">Expérience</span>  par monstre</span></a></li>
                         <li><a href="../../../App/Zyrass/Models/mobs_gold.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Nombre d'<span class="text-warning">or</span>  par monstre</span></a></li>
                         <li role="separator" class="divider"></li>

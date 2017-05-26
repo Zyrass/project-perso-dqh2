@@ -6,6 +6,9 @@
 <div class="container-fluid" style="margin-top: 40px">
     <div class="row">
         <div class="col-xs-10 col-xs-offset-1">
+            <div class="alert alert-danger">
+                Non fonctionnel pour le moment
+            </div>
             <div class="alert alert-info">
                 <h4>Pourquoi me contacter ?</h4>
                 <hr>
@@ -18,7 +21,7 @@
                 <hr>
                 Faîtes le moi savoir en remplissant le formulaire ci-dessous
             </div>
-            <form action="traitement.php" method="post">
+            <form action="" method="post">
                 <input type="text" class="form-control" id="email" placeholder="Votre email"><br />
                 <select class="form-control">
                     <option>Il manque quelque chose</option>
@@ -28,8 +31,8 @@
                 </select><br />                
                 <textarea class="form-control" rows="6" placeholder="Veuillez saisir votre message ici.. Je m'enfou des fautes d'orthographes par contre veuillez être le plus précis possible. Merci pour votre contribution"></textarea>
                 <hr>
-                <button type="submit" class="btn btn-primary">Envoyer</button> 
-                <button type="clear" class="btn btn-default">Effacer</button>
+                <button type="submit" class="btn btn-primary" disabled>Envoyer</button> 
+                <button type="clear" class="btn btn-default" disabled>Effacer</button>
             </form>
         </div>
     </div>
