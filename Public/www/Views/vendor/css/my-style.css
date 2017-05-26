@@ -28,14 +28,16 @@ figure.icone {
 h3 {
   margin-top: 10px; }
 
-#presentation {
-  margin: 0 auto;
-  padding: 10px; }
-  #presentation p:first-letter {
-    font-size: 2Rem; }
-  #presentation p {
-    word-spacing: 0.2px;
-    letter-spacing: 1px; }
+p:first-letter {
+  font-size: 2Rem;
+  margin-bottom: 0px; }
+
+p {
+  word-spacing: 5px;
+  letter-spacing: 2px; }
+
+.presentation p {
+  padding: 20px; }
 
 footer {
   position: fixed;

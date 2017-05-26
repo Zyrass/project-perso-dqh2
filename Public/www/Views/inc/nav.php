@@ -93,6 +93,8 @@
                         <li role="separator" class="divider"></li>
                     </ul>
                 </li>
+                <li><a href="../../../App/Zyrass/Models/about.php"><i class="fa fa-id-card-o" aria-hidden="true"></i> - A propos</a></li>
+                <li><a href="../../../App/Zyrass/Models/contact.php"><i class="fa fa-envelope-o" aria-hidden="true"></i> - Contact</a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
