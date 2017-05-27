@@ -20,4 +20,13 @@ $(document).ready(function() {
         $(this).tab('show')
     })
 
+/*
+ |-------------------------------------------------------------------------------------
+ | Modal pour les cartes aux trésors
+ |-------------------------------------------------------------------------------------
+ */
+    $('#myModal').on('shown.bs.modal', function () {
+        $('#myInput').focus()
+    })
+
 }); // Fin de jquery

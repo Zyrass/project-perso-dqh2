@@ -1,28 +1,134 @@
 <!-- Page d'accueil -->
 <div class="jumbotron">
-    <h2 class="text-center text-warning">Liste des monstres du jeu</h2>
+    <h2 class="text-center text-warning">Listing des monstres</h2>
 </div>
 
-<div class="container-fluid" style="margin-top: 40px">
+<div class="container" style="margin-top: 40px">
     <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-            <div>
-                <table class="table table-bordered table-hover table-condensed">
-                    <caption>Tableau récapitulatif des monstres du jeu (il en manque)</caption>
-                    <thead>
-                        <tr>
-                            <th>Nom</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($info_mobs_qts as $value) : ?>
-                            <tr>
-                                <td><?= $value['name']; ?></td>
-                            </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+        <div class="col-xs-12">
+        <?php foreach ($info_mobs as $value) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4">
+                <div class="alert alert-info">
+                    <div class="panel panel-warning">
+                        <div class="panel-heading">
+                            <h3 class="wow slideInRight"><small><?= $value['monster_name']; ?></small></h3>                    
+                        </div>
+                        <div class="panel-body">
+                            <figure class=" text-center" style="margin-bottom: 20px">
+                                <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['monster_image']; ?>" alt="image mobs" class="wow rotateIn" style="width:50%">
+                            </figure>
+                            <table class="table table-bordered table-hover table-condensed">
+                                <tr>
+                                    <th width="65%">Expérience</th>
+                                    <td><?= $value["monster_experience"]; ?></td>
+                                </tr>
+                                <tr>
+                                    <th width="65%">Or</th>
+                                    <td><?= $value["monster_gold"]; ?></td>
+                                </tr>
+                            </table>
+
+                            <table class="table table-bordered table-hover table-condensed">
+                                <tr>
+                                    <th width="65%">Avis de recherche</th>
+                                    <td>
+                                        <?php 
+                                            if ($value['monster_search'] == 1) 
+                                            {
+                                                echo '<figure class="text-center">
+                                                            <img src="../../../Public/www/Views/assets/img/yes.png" alt="image wanted" style="width:25%" class="wow rotateIn"> 
+                                                        </figure>';
+                                            }
+                                            else
+                                            {
+                                                echo '<figure class="text-center">
+                                                            <img src="../../../Public/www/Views/assets/img/no.png" alt="image wanted" style="width:25%" class="wow rotateIn"> 
+                                                        </figure>';
+                                            }
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th width="65%" valign="middle">Médaille</th>
+                                    <td>
+                                        <?php 
+                                            if ($value['monster_medal'] == 1) 
+                                            {
+                                                echo '<figure class="text-center">
+                                                        <img src="../../../Public/www/Views/assets/img/yes.png" alt="image wanted" style="width:25%" class="wow rotateIn"> 
+                                                    </figure>';
+                                            }
+                                            else
+                                            {
+                                                echo '<figure class="text-center">
+                                                        <img src="../../../Public/www/Views/assets/img/no.png" alt="image wanted" style="width:25%" class="wow rotateIn"> 
+                                                    </figure>';
+                                            }
+                                        ?>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <table class="table table-bordered table-hover table-condensed">
+                                
+                                    <?php 
+                                        if (!empty($value['ingredient_id_one'])) 
+                                        {
+                                            echo '
+                                                    <figure class="text-center">
+                                                        <figcaption>'. $value['ingredients_name'] . '</figcaption>
+                                                        <img src="../../../Public/www/Views/assets/img/ingredients/' . $value['ingredients_image'] . '" alt="image wanted" style="width:25%" class="wow rotateIn">
+                                                    </figure>                                             
+                                            ';
+                                        }
+                                        else
+                                        {
+                                            echo '
+                                                <tr><th></th></tr>
+                                                <tr><td></td></tr>';
+                                        }
+                                    ?>
+                                
+                                
+                                    <?php
+                                        if (empty($value['ingredient_id_two'])) 
+                                        {
+                                            echo '
+                                                    <figure class="text-center">
+                                                        <figcaption>'. $value['accessories_name'] . '</figcaption>
+                                                        <img src="../../../Public/www/Views/assets/img/accessories/' . $value['accessories_image'] . '" alt="image wanted" style="width:25%" class="wow rotateIn">
+                                                    </figure>                                              
+                                            ';
+                                        } 
+                                        elseif (!empty($value['ingredient_id_two'])) 
+                                        {
+                                            echo '
+                                                <tr>
+                                                    <th width="50%">' . $value['ingredients_name'] . '</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <figure class="text-center">
+                                                            <img src="../../../Public/www/Views/assets/img/ingredients/' . $value['ingredients_image'] . '" alt="image wanted" style="width:25%" class="wow rotateIn"> 
+                                                        </figure>
+                                                    </td>
+                                                </tr>
+                                            ';
+                                        }
+                                        else
+                                        {
+                                            echo '
+                                                <tr><th></th></tr>
+                                                <tr><td></td></tr>';
+                                        }
+                                    ?>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
+        <?php endforeach; ?>
         </div>
     </div>
 </div>
