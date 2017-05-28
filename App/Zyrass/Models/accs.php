@@ -4,7 +4,7 @@
     include '../Controllers/Connexion/bdd_connexion.php';
 
     $req = $dsn->prepare(
-        'SELECT name, effect
+        'SELECT name, effect, image
         FROM accessories
         ORDER BY name'
     );

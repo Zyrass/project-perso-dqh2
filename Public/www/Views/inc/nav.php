@@ -8,12 +8,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand wow slideInLeft" href="../../../../../project-perso-dqh2/App/Zyrass/Models/index.php">Aide <small class="text-warning">Dragon Quest Heroes 2</small></a>
+            <a class="navbar-brand" href="../../../../../project-perso-dqh2/App/Zyrass/Models/index.php">Aide <small class="text-warning">Dragon Quest Heroes 2</small></a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav text-center wow slideInLeft">
+            <ul class="nav navbar-nav text-center">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cubes" aria-hidden="true"></i> - Listing<span class="caret"></span></a>
                     <ul class="dropdown-menu jqueryFadeIn">
@@ -79,8 +79,8 @@
                     </ul>
                 </li>
                 <li><a href="../../../App/Zyrass/Models/treasures.php"><i class="fa fa-info" aria-hidden="true"></i> - <span class="text-danger">SPOIL "les trésors"</span></a></li>
-                <li><a href="../../../App/Zyrass/Models/about.php" class="wow slideInLeft"><i class="fa fa-id-card-o" aria-hidden="true"></i> - <span class="text-info">A propos</span></a></li>
-                <li><a href="../../../App/Zyrass/Models/contact.php" class="wow slideInRight"><i class="fa fa-envelope-o" aria-hidden="true"></i> - <span class="text-warning">Contact</span></a></li>
+                <li><a href="../../../App/Zyrass/Models/about.php"><i class="fa fa-id-card-o" aria-hidden="true"></i> - <span class="text-info">A propos</span></a></li>
+                <li><a href="../../../App/Zyrass/Models/contact.php"><i class="fa fa-envelope-o" aria-hidden="true"></i> - <span class="text-warning">Contact</span></a></li>
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

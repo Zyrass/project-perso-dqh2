@@ -2,16 +2,16 @@
 <div class="jumbotron">
     <h2 class="text-warning wow tada">Les orbes</h2>
 </div>
-<div class="container-fluid" style="margin-top:40px">
+<div class="container" style="margin-top:40px">
     <div class="row">
     <?php foreach ($info_orbs as $value) : ?>
         <div class="col-xs-12 col-sm-6 col-md-3">
             <div class="panel panel-warning">
                 <div class="panel-heading">
                     <figure class="icone">
-                        <img src="../../../Public/www/Views/assets/img/orbs/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 50px" class="wow rotateIn">
+                        <img src="../../../Public/www/Views/assets/img/orbs/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 50px" class="wow rotateIn img-circle">
                     </figure>
-                    <h3 class="text-right wow slideInRight"><small><?= $value['name']; ?></small></h3>                    
+                    <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
                 </div>
                 <div class="panel-body">
                     <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
