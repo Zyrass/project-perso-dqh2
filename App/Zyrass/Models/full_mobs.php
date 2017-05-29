@@ -24,7 +24,8 @@
             monsters.gold AS "m_gold",
             monsters.search AS "m_search",
             monsters.medal AS "m_medal",
-            monsters.image AS "m_image",
+            monsters.image_monster AS "m_image",
+            monsters.image_medal AS "medal_image",
             amounts.amount AS "m_amount" /* Affichage de la quantité de mobs à kill */ 
         FROM monsters
         INNER JOIN amounts ON amounts.amount_id = monsters.amount_id
@@ -37,12 +38,13 @@
 
 
 
-    // 
+    /** A revoir
+
     $req = $dsn->prepare(
         'SELECT 
             monsters.name AS "monster_name",
             monsters.id AS "monster_id",
-            monsters.image AS "monster_image", 
+            monsters.image_monster AS "monster_image", 
             amounts.amount AS "amount", 
             monsters.medal AS "monster_medal", 
             monsters.search AS "monster_search", 
@@ -66,6 +68,7 @@
     $req->execute();
     $info_mobs_save = $req->fetchAll();
 
+**/
 
 
 

@@ -8,15 +8,14 @@
     $info_ingredients = $req->fetchAll();
 
     $req = $dsn->prepare(
-        'SELECT monsters.name AS "name_monster", monsters.image AS "image_monster", ingredients.id AS "id_ingredients"
-        FROM monsters_ingredients
-        INNER JOIN monsters ON monsters_id = monsters.id
-        INNER JOIN ingredients ON ingredients_id = ingredients.id
-        WHERE ingredients.id = 1'
+        'SELECT monsters.name AS "name_monster", monsters.image_monster AS "image_monster"
+        FROM ingredients 
+        INNER JOIN monsters_ingredients ON monsters_ingredients.ingredients_id = ingredients.id
+        INNER JOIN monsters ON monsters_ingredients.monsters_id = monsters.id
+        WHERE ingredients.id = 8'
     );
     $req->execute();
     $info_loot = $req->fetchAll();
-
 
     // Sélection et affichage du template "phtml"
     $template = 'ingredients';
