@@ -3,45 +3,54 @@
     <h3 class="text-center text-warning">La bataille de la tour : centre</h3>
 </div>
 
-<div class="container-fluid" style="margin-top: 40px">
+<!-- Contenu de la page full mobs -->
+<div class="container">
     <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-            <div>
-                <table class="table table-bordered table-hover table-condensed">
-                    <caption>Les monstres de la zone</caption>
-                    <thead>
-                        <tr>
-                            <th>Monstre</th>
-                            <th>Rech.</th>
-                            <th>Médail.</th>
-                            <th>Exp</th>
-                            <th>OR</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php foreach ($info_bataille_tour_centre as $value) : ?>
+        <?php foreach ($info_bataille as $value) : ?>
+        <div class="col-xs-12 col-md-6 col-lg-4">
+            <div class="col-xs-10 col-xs-offset-1 box" id="styleInfo">        
+                <div class="title wow slideInLeft">
+                    <h5><?= $value['m_name']; ?></h5>
+                </div>
+                <div class="ribbon"><span>QTS : <?= $value["a_amount"]; ?></span></div>
+                <div class="portrait wow slideInRight">
+                    <?php if ($value['m_search'] === 0 ) : ?>
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
+                        </figure>
+                    <?php else : ?>
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
+                        </figure>
+                        <figcaption class="text-center"><small class="label label-warning"><span class="text-warning">En fuite...</span></small></figcaption>
+                    <?php endif; ?>                    
+                </div>
+                <div class="well" style="opacity: .5; z-index: -1">
+                    <legend><small>Vous gagnerez :</small></legend>
+                    <table class="table text-center table-bordered table-condensed">
+                        <thead>
                             <tr>
-                                <td><?= $value['nom_monstre']; ?></td>
-                                <td><?php 
-                                    if($value['search'] == 1) 
-                                    { 
-                                        echo "Oui";
-                                    }
-                                ?></td>
-                                <td><?php 
-                                    if($value['medals'] == 1) 
-                                    { 
-                                        echo "Oui";
-                                    }
-                                ?></td>
-                                <td><?= $value['exp']; ?></td>
-                                <td><?= $value['or']; ?></td>
+                                <th>Expérience</th>
+                                <th>Or</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </div>
-</div>
-
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge wow fadeIn"><?= $value["m_exp"]; ?></span></td>
+                                <td><span class="badge wow fadeIn"><?= $value["m_gold"]; ?></span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div> <!-- /well -->
+                <?php if ($value['medal_image'] === NULL) : ?>
+                    <figure class="medals wow tada hidden-xs hidden-sm hidden-md hidden-lg"></figure>
+                <?php else : ?>
+                    <figure class="medals wow tada">
+                        <img src="../../../Public/www/Views/assets/img/medals/<?= $value['medal_image']; ?>" alt="??" class="img-circle">
+                    </figure>
+                <?php endif; ?>               
+            </div> <!-- / #styleInfo -->
+        </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+        <?php endforeach; ?>
+    </div> <!-- /row -->
+</div> <!-- /container -->

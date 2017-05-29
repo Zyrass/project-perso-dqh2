@@ -5,7 +5,16 @@
 
     /*
     |-------------------------------------------------------------------------------------
-    | Bataille du Bois des charmes
+    | Sélection de l'identifiant de la zone en question
+    |-------------------------------------------------------------------------------------
+    */ 
+    $req = $dsn->prepare('SELECT id FROM zoneds WHERE id >= 1');
+    $req->execute();
+    $id = $req->fetch(); 
+
+    /*
+    |-------------------------------------------------------------------------------------
+    | Bataille d'Accordia
     |-------------------------------------------------------------------------------------
     |   01 - Sélection du nom de la zone
     |   02 - Sélection de l'id du monstre
@@ -35,12 +44,12 @@
         INNER JOIN monsters ON monsters.id = monsters_id        
         INNER JOIN amounts ON amounts.amount_id = monsters.amount_id        
         INNER JOIN zoneds On zoneds.id = zoneds_id
-        WHERE zoneds.id = 19
+        WHERE zoneds.id = ?
         ORDER BY monsters.name
     ');
-    $req->execute();
+    $req->execute(array($id["id"]));
     $info_bataille = $req->fetchAll();
 
     // Sélection et affichage du template "phtml"
-    $template = 'bataille_bois_charme';
+    $template = 'bataille_accordia';
     include '../../../Public/www/Views/layout.phtml';

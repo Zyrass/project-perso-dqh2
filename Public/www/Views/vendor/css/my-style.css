@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css?family=Cinzel+Decorative|Lato|Philosopher");
 html {
   font-size: 62.5%; }
 
 * {
-  transition: all 0.5s ease-in; }
+  transition: all 0.5s ease-in;
+  font-family: "Lato", sans-serif; }
 
 body {
   background-color: #222; }
@@ -11,7 +13,11 @@ main {
   margin-bottom: 60px; }
 
 h1, h2, h3, h4, h5, h6, th, tr, caption {
-  text-align: center; }
+  text-align: center;
+  font-family: "Cinzel Decorative", cursive; }
+
+small {
+  font-family: "Philosopher", sans-serif; }
 
 .list-group-item {
   color: #222; }
@@ -79,7 +85,8 @@ h3 {
 
 p:first-letter {
   font-size: 2Rem;
-  margin-bottom: 0px; }
+  margin-bottom: 0px;
+  font-family: "Cinzel Decorative", cursive; }
 
 p {
   color: #eee;

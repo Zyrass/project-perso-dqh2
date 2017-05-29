@@ -1,271 +1,387 @@
 <!-- Page d'accueil -->
 <div class="jumbotron">
-    <h2 class="text-warning wow tada">Les armes</h2>
+    <h2 class="text-warning wow tada">Listing des armes</h2>
 </div>
-<div class="container" style="margin-top:40px">
+
+<!-- Contenu de la page armes -->
+<div class="container-fluid" style="margin-top: 20px">
     <div class="row">
-        <legend class="text-center text-info">Doubles lames</legend>
-        <?php foreach ($info_arms_7 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/lames/<?= $value['w_image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['w_name']; ?></small></h3>                    
+        <div class="col-xs-10 col-xs-offset-1">
+            <div class="well" style="height:140px">
+                <legend><small>Sélectionnez un type d'arme</small></legend>
+                <form action="" method="post">
+                    <div class="col-xs-10">
+                        <select class="form-control pull-left" name="choices">
+                            <?php foreach($info_types_arms as $result_info) : ?>
+                                <option value="<?php $result_info['id']; ?>"><?= $result_info['name']; ?></option>
+                            <?php endforeach; ?>
+                        </select>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['w_effet']; ?></small></span>
+                    <div class="col-xs-2">
+                        <input type="submit" class="btn btn-info"/>
                     </div>
-                </div>
+                </form>
             </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Épées à une main</legend>
-        <?php foreach ($info_arms_8 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/épée/<?= $value['w_image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['w_name']; ?></small></h3>                    
+        </div>
+
+
+        <?php if(isset($_POST['choices']) && $_POST['choices'] == 1) : ?>
+
+            <?php foreach ($info_arms_1 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['w_effet']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/arc/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Épées à 2 mains</legend>
-        <?php foreach ($info_arms_9 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/épée_à_2_mains/<?= $value['w_image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['w_name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 2) : ?>
+
+            <?php foreach ($info_arms_2 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['w_effet']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/baguette/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Haches</legend>
-        <?php foreach ($info_arms_14 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/hache/<?= $value['w_image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['w_name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 3) : ?>
+
+            <?php foreach ($info_arms_3 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['w_effet']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/bâton/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Gantelets</legend>
-        <?php foreach ($info_arms_5 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 4) : ?>
+
+            <?php foreach ($info_arms_4 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/boomerang/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Arcs</legend>
-        <?php foreach ($info_arms_6 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 5) : ?>
+
+            <?php foreach ($info_arms_5 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/bouclier/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Cartes</legend>
-        <?php foreach ($info_arms_7 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/lames/<?= $value['w_image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['w_name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 6) : ?>
+
+            <?php foreach ($info_arms_6 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['w_effet']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/tarot/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Baguettes</legend>
-        <?php foreach ($info_arms_8 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 7) : ?>
+
+            <?php foreach ($info_arms_7 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/lames/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Boomerangs</legend>
-        <?php foreach ($info_arms_9 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 8) : ?>
+
+            <?php foreach ($info_arms_8 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/épée/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Griffes</legend>
-        <?php foreach ($info_arms_10 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 9) : ?>
+
+            <?php foreach ($info_arms_9 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/épée_à_2_mains/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">    
-        <legend class="text-center text-info">Boucliers</legend>
-        <?php foreach ($info_arms_11 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 10) : ?>
+
+            <?php foreach ($info_arms_10 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/évantails/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Lances</legend>
-        <?php foreach ($info_arms_12 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 11) : ?>
+
+            <?php foreach ($info_arms_11 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/fouet/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Évantailles</legend>
-        <?php foreach ($info_arms_13 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 12) : ?>
+
+            <?php foreach ($info_arms_12 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/gantelet/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-    <hr>
-    <div class="row">
-        <legend class="text-center text-info">Bouliers</legend>
-        <?php foreach ($info_arms_14 as $value) : ?>
-            <div class="col-xs-12 col-sm-6 col-md-3">
-                <div class="panel panel-warning">
-                    <div class="panel-heading">
-                        <figure class="icone">
-                            <img src="../../../Public/www/Views/assets/img/weapons/<?= $value['image']; ?>" alt="image représentant une orbe" style="width: 55px" class="wow rotateIn img-thumbnail">
-                        </figure>
-                        <h3 class="text-right wow fadeIn"><small><?= $value['name']; ?></small></h3>                    
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 13) : ?>
+
+            <?php foreach ($info_arms_13 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
                     </div>
-                    <div class="panel-body">
-                        <span class="wow fadeIn"><small><?= $value['effect']; ?></small></span>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/griffe/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
                     </div>
-                </div>
-            </div>
-        <?php endforeach; ?>
-    </div>
-</div>
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 14) : ?>
+
+            <?php foreach ($info_arms_14 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
+                    </div>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/hache/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
+                    </div>
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 15) : ?>
+
+            <?php foreach ($info_arms_15 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
+                    </div>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/lance/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
+                    </div>
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 16) : ?>
+
+            <?php foreach ($info_arms_16 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
+                    </div>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/boulier/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
+                    </div>
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php elseif(isset($_POST['choices']) && $_POST['choices'] == "Masse") : ?>
+
+            <?php foreach ($info_arms_17 as $result_info) : ?>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 70px">
+                        <h5><?= $result_info['w_name']; ?></h5>
+                    </div>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/weapons/masse/<?= $result_info['w_image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-thumbnail">
+                        </figure>              
+                    </div>
+                    <div class="well" style="opacity: .5; z-index: -1; margin-top: 130px">
+                        <legend><small>Effets :</small></legend>
+                        <span class="wow fadeIn"><small><?= $result_info['w_effet']; ?></small></span>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+            <?php endforeach; ?>
+
+        <?php endif; ?>
+    </div> <!-- /row -->
+</div> <!-- /container -->

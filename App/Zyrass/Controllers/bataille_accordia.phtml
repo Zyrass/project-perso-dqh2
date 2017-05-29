@@ -6,13 +6,13 @@
 <!-- Contenu de la page full mobs -->
 <div class="container">
     <div class="row">
-        <?php foreach ($info_bataille_accordia as $value) : ?>
+        <?php foreach ($info_bataille as $value) : ?>
         <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="col-xs-10 col-xs-offset-1 box" id="styleInfo">        
                 <div class="title wow slideInLeft">
                     <h5><?= $value['m_name']; ?></h5>
                 </div>
-                <div class="ribbon"><span>QTS : <?= $value["m_amount"]; ?></span></div>
+                <div class="ribbon"><span>QTS : <?= $value["a_amount"]; ?></span></div>
                 <div class="portrait wow slideInRight">
                     <?php if ($value['m_search'] === 0 ) : ?>
                         <figure>
