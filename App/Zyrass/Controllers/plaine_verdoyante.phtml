@@ -4,25 +4,45 @@
 </div>
 
 <!-- Contenu de la page full mobs -->
-<div class="container">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="well well-lg wow fadeIn" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.jpg'); background-size: cover ">
+                <legend class="text-warning text-left" style="text-shadow: 0 0 2px #222"><small>Gain d'XP et d'OR</small></legend>
+                <p>Si vous tuer un seul monstre de chaque espèce dans cette zone vous gagnerez : <span class="text-warning"><?= $info_bataille_count->s_exp; ?></span>pts d'xp et <span class="text-warning"><?= $info_bataille_count->s_gold; ?></span> or !</p>
+            </div>
+        </div>
+    </div>
     <div class="row">
         <?php foreach ($info_bataille as $value) : ?>
-        <div class="col-xs-12 col-md-6 col-lg-4">
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
             <div class="col-xs-10 col-xs-offset-1 box" id="styleInfo">        
                 <div class="title wow slideInLeft">
                     <h5><?= $value['m_name']; ?></h5>
                 </div>
                 <div class="ribbon"><span>QTS : <?= $value["a_amount"]; ?></span></div>
                 <div class="portrait wow slideInRight">
-                    <?php if ($value['m_search'] === 0 ) : ?>
+                    <?php if ($value['m_search'] == 0) : ?>
                         <figure>
                             <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
                         </figure>
-                    <?php else : ?>
+                    <?php endif; ?> 
+
+                    <?php if ($value['m_search'] == 1 && $value['m_name'] == 'Machine à tuer') : ?>
                         <figure>
                             <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
                         </figure>
-                        <figcaption class="text-center"><small class="label label-warning"><span class="text-warning">En fuite...</span></small></figcaption>
+                        <figcaption class="text-center"><small class="label label-danger">Boss de la zone</small></figcaption>
+                    <?php elseif ($value['m_search'] == 1 && $value['m_name'] == 'Tyrantosaure') : ?>
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
+                        </figure>
+                        <figcaption class="text-center"><small class="label label-danger">Boss de la zone</small></figcaption>
+                    <?php elseif($value['m_search'] == 1) : ?>
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
+                            <figcaption class="text-center"><small class="label label-warning"><span class="text-warning">En fuite...</span></small></figcaption>
+                        </figure>
                     <?php endif; ?>                    
                 </div>
                 <div class="well" style="opacity: .5; z-index: -1">
@@ -48,7 +68,13 @@
                     <figure class="medals wow tada">
                         <img src="../../../Public/www/Views/assets/img/medals/<?= $value['medal_image']; ?>" alt="??" class="img-circle">
                     </figure>
-                <?php endif; ?>               
+                <?php endif; ?>
+
+                <?php if($value['m_name'] == "Tyrantosaure") : ?>
+                    <figure class="medals wow tada">
+                        <img src="../../../Public/www/Views/assets/img/medals/<?= $value['medal_image']; ?>" alt="??" class="img-circle">
+                    </figure>
+                <?php endif; ?>
             </div> <!-- / #styleInfo -->
         </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
         <?php endforeach; ?>

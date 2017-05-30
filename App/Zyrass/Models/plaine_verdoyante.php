@@ -1,10 +1,44 @@
 <?php
-    // Connexion à la bdd
+    /*
+    |-------------------------------------------------------------------------------------
+    |
+    |                              Plaine verdoyante
+    |
+    |-------------------------------------------------------------------------------------
+    */
+
+    /*
+    |-------------------------------------------------------------------------------------
+    | Connexion à la base de donnée (BDD)
+    |-------------------------------------------------------------------------------------
+    */
     include '../Controllers/Connexion/bdd_connexion.php';
 
     /*
     |-------------------------------------------------------------------------------------
-    | Plaine verdoyante
+    | Description de la requête SQL côté SELECT
+    |-------------------------------------------------------------------------------------
+    |   01 - Sélection d'une fonction d'agrégat pour calculer une l'expérience
+    |   01 - Sélection d'une fonction d'agrégat pour calculer une l'or
+    |-------------------------------------------------------------------------------------
+    */
+    $req = $dsn->prepare(
+        'SELECT
+            SUM(monsters.experience) AS "s_exp",
+            SUM(monsters.gold) AS "s_gold",
+            COUNT(monsters.id) AS "c_id"
+        FROM `monsters_zoneds` 
+        INNER JOIN monsters ON monsters.id = monsters_id      
+        INNER JOIN zoneds On zoneds.id = zoneds_id
+        WHERE zoneds.id = 1
+        ORDER BY monsters.name
+    ');
+    $req->execute();
+    $info_bataille_count = $req->fetch(PDO::FETCH_OBJ);
+
+    /*
+    |-------------------------------------------------------------------------------------
+    | Description de la requête SQL côté SELECT
     |-------------------------------------------------------------------------------------
     |   01 - Sélection du nom de la zone
     |   02 - Sélection de l'id du monstre

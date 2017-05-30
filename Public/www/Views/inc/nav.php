@@ -1,5 +1,5 @@
 <nav class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -13,17 +13,18 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav text-center align-right">
+            <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-cubes" aria-hidden="true"></i> - Listing<span class="caret"></span></a>
                     <ul class="dropdown-menu jqueryFadeIn">
-                        <li class="dropdown-header text-center">Des données à ne plus en finir</li>
+                        <li class="dropdown-header text-center">Plusieurs données sur le jeu</li>
                         <li class="divider"></li>
                         <li><a href="../../../App/Zyrass/Models/arms.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">armes</span></span></a></li>
                         <li><a href="../../../App/Zyrass/Models/orbs.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">orbes</span></span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/accs.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">accessoires</span></span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">ingrédients</span></span> <small>- En cours de développement</small></a></li>
+                        <li><a href="../../../App/Zyrass/Models/accs.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">accessoires</span></span> <small>- 2 accs' inconnu</small></a></li>
+                        <li><a href="../../../App/Zyrass/Models/ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">ingrédients</span></span> <small>- Manque les objets lâchés</small></a></li>
                         <li><a href="../../../App/Zyrass/Models/full_mobs.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">monstres</span></span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/medals.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">médailles</span></span></a></li>
                     </ul>
                 </li>
 
@@ -67,18 +68,33 @@
                 </li>
 
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-leaf" aria-hidden="true"></i> - Divers<span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gift" aria-hidden="true"></i> - Bonus<span class="caret"></span></a>
                     <ul class="dropdown-menu jqueryFadeIn">
-                        <li class="dropdown-header text-center">Découvrez d'autres informations du jeu</li>
+                        <li class="dropdown-header text-center">SPOIL</li>
                         <li class="divider"></li>
-                        <li><a href="../../../App/Zyrass/Models/amounts.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary"><span class="text-warning">Quantités</span> de monstre à tuer</span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/mobs_ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary"><span class="text-warning">Ingrédients</span> par monstre</span></a></li>
-
+                        <li><a href="../../../App/Zyrass/Models/treasures.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Retrouvez chaque <span class="text-warning">trésors</span></span></a></li>
+                        <li class="dropdown-header text-center">Où gagner beaucoup d'XP où d'OR</li>
+                        <li class="divider"></li>
+                        <li><a href="../../../App/Zyrass/Models/.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Spot pour gagner de <span class="text-warning">l'expérience</span></span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Spot pour gagner de <span class="text-warning">l'or</span></span></a></li>
                     </ul>
                 </li>
-                <li><a href="../../../App/Zyrass/Models/treasures.php"><i class="fa fa-info" aria-hidden="true"></i> - <span class="text-danger">SPOIL</span></a></li>
-                <li><a href="../../../App/Zyrass/Models/about.php"><i class="fa fa-id-card-o" aria-hidden="true"></i> - <span class="text-info">A propos</span></a></li>
-                <li><a href="../../../App/Zyrass/Models/contact.php"><i class="fa fa-envelope-o" aria-hidden="true"></i> - <span class="text-warning">Contact</span></a></li>
+
+                <li><a href="../../../App/Zyrass/Models/wait.php" disabled><i class="fa fa-info" aria-hidden="true"></i> - A venir</a></li>
+
+                <!-- 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-info" aria-hidden="true"></i> - Auteur<span class="caret"></span></a>
+                    <ul class="dropdown-menu jqueryFadeIn">
+                        <li class="dropdown-header text-center">Découvrez qui est l'auteur de ce site</li>
+                        <li class="divider"></li>
+                        <li><a href="../../../App/Zyrass/Models/about.php" disabled><i class="fa fa-id-card-o" aria-hidden="true"></i> - <span class="text-primary">A propos de <span class="text-warning">moi</span></span></a></li>
+                        <li class="dropdown-header text-center">Une erreur ? Un oubli ? Une faute d'orthographe ?</li>
+                        <li class="divider"></li>
+                        <li><a href="../../../App/Zyrass/Models/contact.php" disabled><i class="fa fa-envelope-o" aria-hidden="true"></i> - <span class="text-primary">Contactez<span class="text-warning">-moi</span></span></a></li></li>
+                    </ul>
+                </li>
+                -->
             </ul>
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

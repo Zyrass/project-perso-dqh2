@@ -14,16 +14,28 @@
                 </div>
                 <div class="ribbon"><span>QTS : <?= $value["a_amount"]; ?></span></div>
                 <div class="portrait wow slideInRight">
-                    <?php if ($value['m_search'] === 0 ) : ?>
+                    <?php if ($value['m_search'] == 0 && $value['m_name'] == 'Sculpture de glace' ) : ?>
                         <figure>
                             <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
                         </figure>
-                    <?php else : ?>
+                        <figcaption class="text-center"><small class="label label-danger">Boss de la zone</small></figcaption>
+                    <?php elseif($value['m_search'] == 0): ?>
                         <figure>
                             <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
                         </figure>
-                        <figcaption class="text-center"><small class="label label-warning"><span class="text-warning">En fuite...</span></small></figcaption>
-                    <?php endif; ?>                    
+                    <?php endif; ?> 
+
+                    <?php if ($value['m_search'] == 1 && $value['m_name'] == 'Mékanotimbré') : ?>
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
+                        </figure>
+                        <figcaption class="text-center"><small class="label label-danger">Boss de la zone</small></figcaption>
+                    <?php elseif($value['m_search'] == 1) : ?>
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/monsters/<?= $value['m_image']; ?>" alt="" class="img-thumbnail">
+                            <figcaption class="text-center"><small class="label label-warning"><span class="text-warning">En fuite...</span></small></figcaption>
+                        </figure>
+                    <?php endif; ?>
                 </div>
                 <div class="well" style="opacity: .5; z-index: -1">
                     <legend><small>Vous gagnerez :</small></legend>
