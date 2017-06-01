@@ -75,8 +75,8 @@
                         <li><a href="../../../App/Zyrass/Models/treasures.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Retrouvez chaque <span class="text-warning">trésors</span></span></a></li>
                         <li class="dropdown-header text-center">Où gagner beaucoup d'XP où d'OR</li>
                         <li class="divider"></li>
-                        <li><a href="../../../App/Zyrass/Models/.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Spot pour gagner de <span class="text-warning">l'expérience</span></span></a></li>
-                        <li><a href="../../../App/Zyrass/Models/.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Spot pour gagner de <span class="text-warning">l'or</span></span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/calc_xp.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Spot pour gagner de <span class="text-warning">l'expérience</span></span></a></li>
+                        <li><a href="../../../App/Zyrass/Models/calc_gold.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Spot pour gagner de <span class="text-warning">l'or</span></span></a></li>
                     </ul>
                 </li>
 

@@ -6,6 +6,14 @@
 <!-- Contenu de la page full mobs -->
 <div class="container">
     <div class="row">
+        <div class="col-xs-12">
+            <div class="well well-lg wow fadeIn" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.jpg'); background-size: cover ">
+                <legend class="text-warning text-left" style="text-shadow: 0 0 2px #222"><small>Gain d'XP et d'OR</small></legend>
+                <p>Si vous tuer un seul monstre de chaque espèce dans cette zone vous gagnerez : <span class="text-warning"><?= $info_bataille_count->s_exp; ?></span>pts d'xp et <span class="text-warning"><?= $info_bataille_count->s_gold; ?></span> or !</p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
         <?php foreach ($info_bataille as $value) : ?>
         <div class="col-xs-12 col-md-6 col-lg-4">
             <div class="col-xs-10 col-xs-offset-1 box" id="styleInfo">        
