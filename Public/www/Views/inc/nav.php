@@ -70,11 +70,15 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-gift" aria-hidden="true"></i> - Bonus<span class="caret"></span></a>
                     <ul class="dropdown-menu jqueryFadeIn">
-                        <li class="dropdown-header text-center">SPOIL</li>
+                        <li class="dropdown-header text-center">Bonus / SPOIL</li>
                         <li class="divider"></li>
+                        <li class="dropdown-header text-center">Où se cache chaque trésors ?</li>
                         <li><a href="../../../App/Zyrass/Models/treasures.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Retrouvez chaque <span class="text-warning">trésors</span></span></a></li>
-                        <li class="dropdown-header text-center">Où gagner beaucoup d'XP où d'OR</li>
                         <li class="divider"></li>
+                        <li class="dropdown-header text-center">Astuce ressources.</li>
+                        <li><a href="../../../App/Zyrass/Models/ressources.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Valgue !! <span class="text-warning">Où te caches-tu ?</span></span></a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header text-center">Où gagner beaucoup d'XP où d'OR</li>
                         <li><a href="../../../App/Zyrass/Models/calc_xp.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Spot pour gagner de <span class="text-warning">l'expérience</span></span></a></li>
                         <li><a href="../../../App/Zyrass/Models/calc_gold.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Spot pour gagner de <span class="text-warning">l'or</span></span></a></li>
                     </ul>

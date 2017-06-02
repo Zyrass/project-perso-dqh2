@@ -3,32 +3,30 @@
     <h2 class="text-center text-warning wow tada">Listing des ingrédients</h2>
 </div>
 
-<!-- Contenu de la page full mobs -->
+<!-- Contenu de la page full ingrédients -->
 <div class="container">
     <div class="row">
         <?php foreach ($info_all_loot as $value) : ?>
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            <div class="col-xs-10 col-xs-offset-1" id="styleInfo">        
-                <div class="title wow slideInLeft" style="top: 60px">
-                    <h5><?= $value['name']; ?></h5>
-                </div>
-                <div class="portrait wow slideInRight">
-                    <figure>
-                        <img src="../../../Public/www/Views/assets/img/ingredients/<?= $value['img']; ?>" alt="Icone de la ressource" class="wow slideInRight img-responsive">
-                    </figure>              
-                </div>
-                <div style="z-index: -1; margin-top: 100px">
-                    <legend><small>Lâché par :</small></legend>
-
-                            <div class="media">
-                                <div class="media-body">
-                                    <h4 class="media-heading text-left">- <?= $info_id_loot['name_monster'] ; ?></h4>
-                                </div>
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="col-xs-10 col-xs-offset-1 img-thumbnail" id="styleInfo">        
+                    <div class="title wow slideInLeft" style="top: 60px; left: 20px">
+                        <h5><?= $value['name']; ?></h5>
+                    </div>
+                    <div class="portrait wow slideInRight">
+                        <figure>
+                            <img src="../../../Public/www/Views/assets/img/ingredients/<?= $value['img']; ?>" alt="Icone de la ressource" class="wow slideInRight img-responsive img-thumbnail">
+                        </figure>              
+                    </div>
+                    <div style="z-index: -1; margin-top: 100px">
+                        <legend><small>Lâché par :</small></legend>
+                        <div class="media">
+                            <div class="media-body">
+                                <h4 class="media-heading text-left">- <?= $info_id_loot['name_monster'] ; ?></h4>
                             </div>
-                    </ul>  
-                </div> <!-- /well -->    
-            </div> <!-- / #styleInfo -->
-        </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
+                        </div>
+                    </div> <!-- /well -->    
+                </div> <!-- / #styleInfo -->
+            </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
         <?php endforeach; ?>
     </div> <!-- /row -->
 </div> <!-- /container -->

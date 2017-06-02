@@ -26,6 +26,7 @@
     );
     $req->execute(array("id"));
     $info_id_loot = $req->fetch();
+    
 
 
     // Sélection et affichage du template "phtml"

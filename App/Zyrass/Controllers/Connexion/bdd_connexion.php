@@ -6,7 +6,7 @@
 
     // On test la connexion à la base de donnée.
     try {
-        $dsn = new PDO(HOST, USER, PASSWORD);
+        $dsn = new PDO(HOST, USER, PASSWORD) or die(print_r($dsn->errorInfo()));
         $dsn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $dsn->exec('SET NAMES UTF8');
     } catch (PDOException $e) {

@@ -31,73 +31,72 @@
             <!-- Toutes les médailles --> 
                 <?php foreach ($info_medals_all as $result_info) : ?>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="col-xs-10 col-xs-offset-1" id="styleInfo" style="height: 320px; border: 1px solid #999; box-shadow: 0 0 5px #222">        
-                            <div class="title wow slideInLeft" style="top: 250px;" >
-                                <h5><?= $result_info['name']; ?></h5>
+                        <div class="col-xs-10 col-xs-offset-1 img-thumbnail" id="styleInfo" style="height: 250px; box-shadow: 0 0 5px #222">
+                            <div class="thumbnail" style="opacity: .5; margin-top:20px; box-shadow: 0 0 5px #222;">
+                                <figure class="text-center">
+                                    <img src="../../../Public/www/Views/assets/img/medals/<?= $result_info['image']; ?>" alt="Icone de la ressource" class="wow rotateIn" >
+                                </figure>
                             </div>
-                            <div>
-                                <figure>
-                                    <img src="../../../Public/www/Views/assets/img/medals/<?= $result_info['image']; ?>" alt="Icone de la ressource" class="wow rotateIn" style="width: 100%">
-                                </figure>    
-                            </div> <!-- /well -->    
+                            <div class="title" style="top: 190px">
+                                <h5 class="wow slideInRight"><?= $result_info['name']; ?></h5>
+                            </div>
                         </div> <!-- / #styleInfo -->
                     </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
-                <?php endforeach; ?>
+                <?php endforeach; ?>  
 
         <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 2) : ?>
         
             <!-- Les médailles de type sentinelle --> 
                 <?php foreach ($info_medals_sentinelle as $result_info) : ?>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="col-xs-10 col-xs-offset-1" id="styleInfo" style="height: 300px; border: 1px solid #999; box-shadow: 0 0 5px #222">        
-                            <div class="title wow slideInLeft page-heading" style="top: 230px; left: 50px" >
-                                <h5><?= $result_info['name']; ?></h5>
+                        <div class="col-xs-10 col-xs-offset-1 img-thumbnail" id="styleInfo" style="height: 250px; box-shadow: 0 0 5px #222">
+                            <div class="thumbnail" style="opacity: .5; margin-top:20px; box-shadow: 0 0 5px #222;">
+                                <figure class="text-center">
+                                    <img src="../../../Public/www/Views/assets/img/medals/<?= $result_info['image']; ?>" alt="Icone de la ressource" class="wow rotateIn" >
+                                </figure>
                             </div>
-                            <div class="well" style="opacity: .5; z-index: -1; margin-top: 30px; height: 220px">
-                                <figure>
-                                    <img src="../../../Public/www/Views/assets/img/medals/<?= $result_info['image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-circle">
-                                </figure>    
-                            </div> <!-- /well -->    
+                            <div class="title" style="top: 190px">
+                                <h5 class="wow slideInRight"><?= $result_info['name']; ?></h5>
+                            </div>
                         </div> <!-- / #styleInfo -->
                     </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
-                <?php endforeach; ?>
+                <?php endforeach; ?>  
 
         <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 3) : ?>
 
             <!-- Les médailles de type remplaçant --> 
                 <?php foreach ($info_medals_remplaçant as $result_info) : ?>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="col-xs-10 col-xs-offset-1" id="styleInfo" style="height: 300px; border: 1px solid #999; box-shadow: 0 0 5px #222">        
-                            <div class="title wow slideInLeft page-heading" style="top: 230px; left: 50px" >
-                                <h5><?= $result_info['name']; ?></h5>
+                        <div class="col-xs-10 col-xs-offset-1 img-thumbnail" id="styleInfo" style="height: 250px; box-shadow: 0 0 5px #222">
+                            <div class="thumbnail" style="opacity: .5; margin-top:20px; box-shadow: 0 0 5px #222;">
+                                <figure class="text-center">
+                                    <img src="../../../Public/www/Views/assets/img/medals/<?= $result_info['image']; ?>" alt="Icone de la ressource" class="wow rotateIn" >
+                                </figure>
                             </div>
-                            <div class="well" style="opacity: .5; z-index: -1; margin-top: 30px; height: 220px">
-                                <figure>
-                                    <img src="../../../Public/www/Views/assets/img/medals/<?= $result_info['image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-circle">
-                                </figure>    
-                            </div> <!-- /well -->    
+                            <div class="title" style="top: 190px">
+                                <h5 class="wow slideInRight"><?= $result_info['name']; ?></h5>
+                            </div>
                         </div> <!-- / #styleInfo -->
                     </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
-                <?php endforeach; ?>
+                <?php endforeach; ?>  
 
         <?php elseif(isset($_POST['choices']) && $_POST['choices'] == 4) : ?>
 
             <!-- Les médailles de type escorte --> 
                 <?php foreach ($info_medals_escorte as $result_info) : ?>
                     <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        <div class="col-xs-10 col-xs-offset-1" id="styleInfo" style="height: 300px; border: 1px solid #999; box-shadow: 0 0 5px #222">        
-                            <div class="title wow slideInLeft page-heading" style="top: 230px; left: 50px" >
-                                <h5><?= $result_info['name']; ?></h5>
+                        <div class="col-xs-10 col-xs-offset-1 img-thumbnail" id="styleInfo" style="height: 250px; box-shadow: 0 0 5px #222">
+                            <div class="thumbnail" style="opacity: .5; margin-top:20px; box-shadow: 0 0 5px #222;">
+                                <figure class="text-center">
+                                    <img src="../../../Public/www/Views/assets/img/medals/<?= $result_info['image']; ?>" alt="Icone de la ressource" class="wow rotateIn" >
+                                </figure>
                             </div>
-                            <div class="well" style="opacity: .5; z-index: -1; margin-top: 30px; height: 220px">
-                                <figure>
-                                    <img src="../../../Public/www/Views/assets/img/medals/<?= $result_info['image']; ?>" alt="Icone de la ressource" class="wow rotateIn img-responsive img-circle">
-                                </figure>    
-                            </div> <!-- /well -->    
+                            <div class="title" style="top: 190px">
+                                <h5 class="wow slideInRight"><?= $result_info['name']; ?></h5>
+                            </div>
                         </div> <!-- / #styleInfo -->
                     </div> <!-- /col-xs-12 col-md-6 col-lg-4 -->
-                <?php endforeach; ?>
-                    
+                <?php endforeach; ?>                    
 
         <?php endif; ?>
     </div>
