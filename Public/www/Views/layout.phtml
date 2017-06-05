@@ -21,15 +21,11 @@
 
         <!-- style pour éviter d'avoir un problème avec la navbar -->
         <style>
-            body { 
-                padding-top: 50px;
-                padding-bottom: 20px;
-            }
-
             .jumbotron {
                 background-image:url('../../../Public/www/Views/assets/img/bg7.webp');
                 box-shadow: 0 1px 5px #222;
             }
+
         </style>
         <!-- Style Navbar Multi-niveau -->
         <style>
@@ -46,7 +42,6 @@
         <![endif]-->
 
         <!-- En-tête commune de l'application -->
-        
         
         <!-- Code Généré via le template phtml -->
         <main>
@@ -68,13 +63,41 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-12">
-                        <h6><small>Toutes les informations appartiennent à <br /><br /><a href="http://eu.square-enix.com/fr"><img src="http://eu.square-enix.com/sites/all/themes/custom/bleach/images/square_logo.png" alt="logo square-enix" style="height:15px"></a></small></h6>
+                        <div class="visible-md col-md-6 visible-lg">
+                            <h6>Découvrez les mentions légales</h6>
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#mentions">
+                                <span class="text-warning">Mentions légales</span>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="mentions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                            <h4 class="modal-title" id="myModalLabel">Mentions légales</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            en cours de développement...
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Toutes les donées appartiennent à</h6>
+                            <a href="http://eu.square-enix.com/fr">
+                                <div class="well well-sm" style="opacity: .4">
+                                    <figure>
+                                        <img src="http://eu.square-enix.com/sites/all/themes/custom/bleach/images/square_logo.png" alt="logo square-enix" style="height:15px">
+                                    </figure>
+                                </div>
+                            </a>
+                        </div>                        
                     </div>
                 </div>
-            </div>
-
-            
-            <hr>           
+            </div>         
         </footer>
 
         <!-- script jquery-->

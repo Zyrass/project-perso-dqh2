@@ -1,37 +1,147 @@
 <!-- Page d'accueil -->
 <div class="jumbotron">
     <h2 class="text-warning wow tada">Accueil</h2>
+    <h6><span class="badge wow fadeIn"><?= $info_compteur->visiteur; ?> ème</span> visite</h6>
 </div>
-<div class="container" style="margin-top: 40px">
-    <div class="row">
-        <div class="col-xs-10 col-xs-offset-1">
-            <div class="well well-lg wow fadeIn" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.webp'); background-size: cover ">
-                <legend class="text-warning text-right" style="text-shadow: 0 0 2px #222"><small>Moteur de recherche rapide</small></legend>
-                <form class="form">
-                    <div class="form-group">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="EN DÉVELOPPEMENT..." id="inputSearch" disabled="disabled">
-                            <div class="input-group-btn">
-                                <button type="submit" class="btn btn-default" disabled="disabled"><i class="fa fa-search" aria-hidden="true"></i></button>
+
+<div class="container-fluid" style="margin-top: 40px">
+    <div class="row" style="height: 0">
+        <div id="affixPerso" style="position: relative; top: 150px">
+            <ul class="nav nav-pills nav-stacked" data-spy="affix" data-offset-top="200">
+                <li class="active"><button type="button" class="btn btn-default" data-toggle="modal" data-target="#search_mobs"><i class="fa fa-search" aria-hidden="true"></i> Mob</button></li>
+                <li><button type="button" class="btn btn-default" data-toggle="modal" data-target="#search_accs"><i class="fa fa-search" aria-hidden="true"></i> Accs</button></li>
+                <li><button type="button" class="btn btn-default" data-toggle="modal" data-target="#search_ingre"><i class="fa fa-search" aria-hidden="true"></i> Ress</button></li>
+            </ul>
+
+            <!-- Modal -->
+            <div class="modal fade" id="search_mobs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Rechercher un monstre</h4>
+                        </div>
+                        <div class="modal-body" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.webp'); background-size: cover ">
+                            <legend class="text-warning">Comment ça marche ?</legend>
+                            <div class="well">
+                                <blockquote class="blockquote">
+                                    <p>Ce moteur de recherche permet de retrouver toutes les informations spécifique d'un certain monstre en particulier.</p>
+                                </blockquote>
+                                <h5>Ce que vous allez retrouver :</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item list-group-item-warning">1 - La fiche du monstre</li>
+                                    <li class="list-group-item list-group-item-warning">2 - La/les ressource(s) que l'on peut récupérer</li>
+                                    <li class="list-group-item list-group-item-warning">3 - L'accessoire que l'ont peut récupérer si il en n'a un</li>
+                                    <li class="list-group-item list-group-item-warning">4 - La zone où le monstre à été vue</li>
+                                </ul>
+                            </div>
+                            <legend class="text-warning">Recherche d'un monstre</legend>
+                            <form class="form" action="../Models/result_mobs.php" method="POST">
+                                <div class="form-group">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Saisir le nom d'un monstre" name="monster_name">
+                                        <div class="input-group-btn">
+                                            <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="search_accs" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Rechercher un accessoire</h4>
+                        </div>
+                        <div class="modal-body" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.webp'); background-size: cover ">
+                            <legend class="text-warning">Comment ça marche ?</legend>
+                            <div class="well">
+                                <blockquote class="blockquote">
+                                    <p>Ce moteur de recherche permet de retrouver toutes les informations spécifique d'un certain accessoire en particulier.</p>
+                                </blockquote>
+                                <h5>Ce que vous allez retrouver :</h5>
+                                <ul class="list-group">
+                                    <li class="list-group-item list-group-item-warning">1 - La fiche de l'accessoire</li>
+                                    <li class="list-group-item list-group-item-warning">2 - Le/les monstre(s) qui permet(tes) d'obtenir cet accessoire</li>
+                                    <li class="list-group-item list-group-item-warning">4 - La zone où le/les monstres à/ont été vue</li>
+                                </ul>
+                            </div>
+                            <legend class="text-warning">Recherche d'un accessoire</legend>
+                                    <form class="form">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="En cours de développement.." name="monster_name" disabled="disabled">
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-default" disabled="disabled"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                    
                             </div>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-            <div id="presentation">
-                <p class="wow slideInLeft">Dragon Quest Heroes 2 est un jeu prenant. mais il faut l'avoué, si on est pas un minimum organisé, rechercher un type de monstre spécifique est assez casse gueule.</p>
-                <hr>
-                <p class="wow slideInRight">En effet, il faut parcourir chaque map, noter sur une feuille de papier le loot/monstre... Je ne vous le cache pas, c'est très long et certains n'auront pas la patience d'allez jusqu'au bout.</p>
-                <hr>
-                <p class="wow slideInLeft">C'est pour celà que j'ai tenu à rédigé ce site 'perso' afin d'aider un très grand nombre de personne.</p>
-                <hr>
-                <p class="wow slideInUp">G un grand "G" comme gratuit. Et oui ce que je propose reste entièrement gratuit. Il est hors de question de faire du profit sur ce site. La seule chose qui m'intéresse c'est la possibilité de proposer mon projet pour un futur emploi.</p>
+            <!-- Modal -->
+            <div class="modal fade" id="search_ingre" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">Rechercher un ingrédient</h4>
+                        </div>
+                        <div class="modal-body" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.webp'); background-size: cover ">
+                                    <form class="form">
+                                        <div class="form-group">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" placeholder="En cours de développement.." name="monster_name" disabled="disabled">
+                                                <div class="input-group-btn">
+                                                    <button type="button" class="btn btn-default" disabled="disabled"><i class="fa fa-search" aria-hidden="true"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <br />
+        </div>
 
-            <div class="well well-sm text-center">
-                <span>Cette page à été vue depuis le 01 juin 2017 : <span class="badge wow fadeIn"><?= $info_compteur->visiteur; ?> fois</span></span>
-            </div>
+        <div class="row">
+            <diV class="col-xs-8 col-xs-offset-3 col-md-10 col-md-offset-1">
+                <div class="col-md-4 col-md-offset-1 styleInfo_home">
+                    <div>
+                        <img src="../../../Public/www/Views/assets/img/test/1.png" alt="" id="imagePersoHome" class="visible-lg visible-md one">
+                    </div>
+                    <p class="wow fadeIn">Dragon Quest Heroes 2<br />Ce jeu est prenant. Mais il faut l'avoué, si nous ne sommes pas un minimum organisé, rechercher un type de monstre spécifique sera un véritable cauchemard... </p>
+                </div>
+                <div class="col-md-4 col-md-offset-2 styleInfo_home">
+                    <div>
+                        <img src="../../../Public/www/Views/assets/img/test/2.png" alt="" id="imagePersoHome" class="visible-lg visible-md two">
+                    </div>
+                    <p class="wow fadeIn">Courage !!<br />En effet, il vous faudra parcourir chaque map, noter sur une feuille de papier le loot par monstre, sa zone de repop... Je l'ai fait et je ne vous le cache pas, c'est très long et je me dis que certains n'auront pas la patience d'allez jusqu'au bout.</p>
+                </div>
+                <div class="col-md-4 col-md-offset-1 styleInfo_home">
+                    <div>
+                        <img src="../../../Public/www/Views/assets/img/test/3.png" alt="" id="imagePersoHome" class="visible-lg visible-md three">
+                    </div>
+                    <p class="wow fadeIn">Partage !!<br />C'est donc pour celà que j'ai tenu à rédigé ce site 'perso' afin d'aider un très grand nombre de personne. Bien entendu ce ne sont que des informations que j'ai obtenu en jouant. Cepandant des joueurs m'ont donner des informations précieuse que je n'avais pas et sans eux le site ne serait pas ce qu'il est aujourd'hui.</p>
+                </div>
+                <div class="col-md-4 col-md-offset-2 styleInfo_home">
+                    <div>
+                        <img src="../../../Public/www/Views/assets/img/test/4.png" alt="" id="imagePersoHome" class="visible-lg visible-md four">
+                    </div>
+                    <p class="wow fadeIn">Gratuit !!<br />Et oui ce que je propose restera entièrement gratuit. Il est hors de question pour moi de faire du profit sur ce site. La seule chose qui m'intéresse c'est la possibilité de proposer mon projet pour un futur emploi.</p>
+                </div>            
+            </diV>
         </div>
     </div>
 </div>

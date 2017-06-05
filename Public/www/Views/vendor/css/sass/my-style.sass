@@ -3,6 +3,7 @@
 
 html
     font-size: 62.5%
+    box-sizing: border-box
 
 *
     transition: all .5s ease-in
@@ -10,9 +11,8 @@ html
 
 body
     background-color: #222
-
-main
-    margin-bottom: 60px
+    padding-top: 50px
+    padding-bottom: 130px
 
 h1, h2, h3, h4, h5, h6, th, tr, caption
     text-align: center
@@ -26,17 +26,19 @@ small
     color: #222
 
 .navbar
-    background-color: #111
-    #inputSearch
-        width: 100%
+    background-color: #111    
+    margin-right: 25px
+    width: 100%
 
-#styleInfo
+#affixPerso
+    z-index: 1500
+
+#styleInfo, .styleInfo_home
     margin-top: 20px
     margin-bottom: 60px
     background-image: url('../../../Views/assets/img/parchemin.webp')
     background-repeat: no-reapeat
     background-size: cover
-    height: 350px
     position: relative
 
     .title
@@ -69,6 +71,43 @@ small
         img
             width: 50%
 
+#styleInfo
+    height: 350px
+
+.styleInfo_home
+    padding: 40px
+    box-shadow: 0 0 10px #eee
+    margin-right: 0px
+    div
+        position: absolute
+        img.one
+            width: 60%
+            position: relative
+            left: 380px
+            top: -80px
+            opacity: .5
+        img.two
+            width: 50%
+            position: relative
+            left: -280px
+            top: -105px
+            opacity: .5
+        img.three
+            width: 60%
+            position: relative
+            left: 450px
+            top: -80px
+            opacity: .5
+        img.four
+            width: 50%
+            position: relative
+            left: -280px
+            top: -100px
+            opacity: .5
+    p
+        color: #222
+        text-shadow: 1px 0 1px #222
+
 .panel
     box-shadow: 0px 0px 10px #eee
 
@@ -94,7 +133,7 @@ p:first-letter
     font-family: 'Cinzel Decorative', cursive
     color: #f0ad4e
 p
-    color: #eee
+    color: #555
     word-spacing: 5px
     letter-spacing: 2px
 
@@ -104,13 +143,13 @@ p
 
 footer
     position: fixed
-    width: 100%
     bottom: 0
+    width: 100%
+    margin-bottom: 0
     background-color: #111
-    border-top: 2px solid #222
     color: #eee
-    height: 90px
-    line-height: 50px
+    z-index: 1500
+    padding-top: 25px
 
 /**
 .box
@@ -168,6 +207,10 @@ footer
         height: 75px
         text-align: right
 
+@media screen and (max-width: 996px)
+    #styleInfo_home
+
+        margin: 20px 20px 20px 80px
 
 @media screen and (min-width: 320px) and (max-width: 374px)
     #styleInfo
@@ -190,7 +233,7 @@ footer
             width: 25% !important
         .medals img
             width: 41% !important
-@media screen and (min-width: 996px)
+@media screen and (min-width: 996px) and (max-width: 1439px)
     #styleInfo
         .portrait
             top: -20px !important
@@ -198,3 +241,79 @@ footer
             width: 25% !important
         .medals img
             width: 38% !important
+    
+    .styleInfo_home
+        div
+            img.one
+                width: 100%
+                left: 150px
+                top: -50px
+                opacity: .8
+            img.two
+                width: 80%
+                left: -220px
+                top: -60px
+                opacity: .8
+            img.three
+                width: 100%
+                left: 150px
+                top: -80px
+                opacity: .8
+            img.four
+                width: 100%
+                left: -300px
+                top: -100px
+                opacity: .8
+
+@media screen and (min-width: 1440px) and (max-width: 1699px)
+    .styleInfo_home
+        div
+            img.one
+                width: 70%
+                left: 280px
+                top: -50px
+                opacity: .8
+            img.two
+                width: 60%
+                left: -240px
+                top: -60px
+                opacity: .8
+            img.three
+                width: 80%
+                left: 250px
+                top: -80px
+                opacity: .8
+            img.four
+                width: 80%
+                left: -300px
+                top: -150px
+                opacity: .8
+
+@media screen and (min-width: 1700px)
+    .styleInfo_home
+        div
+            img.one
+                width: 50%
+                left: 380px
+                top: -50px
+                opacity: .8
+            img.two
+                width: 40%
+                left: -200px
+                top: -80px
+                opacity: .8
+            img.three
+                width: 60%
+                left: 350px
+                top: -80px
+                opacity: .8
+            img.four
+                width: 60%
+                left: -300px
+                top: -150px
+                opacity: .8
+
+@media screen and (min-width: 2000px)
+    .styleInfo_home
+        div
+            display: none

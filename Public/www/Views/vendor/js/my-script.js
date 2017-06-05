@@ -29,5 +29,13 @@ $(document).ready(function() {
         $('#myInput').focus()
     })
 
+    $('#myAffix').affix({
+    offset:  {
+        top: 400,
+        bottom: function () {
+        return (this.bottom = $('.footer').outerHeight(true))
+        }
+    }
+    })
 
 }); // Fin de jquery
