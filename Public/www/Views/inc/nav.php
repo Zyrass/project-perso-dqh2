@@ -22,7 +22,7 @@
                         <li><a href="../../../App/Zyrass/Models/arms.php" disabled><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">armes</span></span></a></li>
                         <li><a href="../../../App/Zyrass/Models/orbs.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">orbes</span></span></a></li>
                         <li><a href="../../../App/Zyrass/Models/accs.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">accessoires</span></span> <small>- 2 accs' inconnu</small></a></li>
-                        <li><a href="../../../App/Zyrass/Models/ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">ingrédients</span></span> <small>- Manque les objets lâchés</small></a></li>
+                        <li><a href="../../../App/Zyrass/Models/ingredients.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">ingrédients</span></span></a></li>
                         <li><a href="../../../App/Zyrass/Models/full_mobs.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">monstres</span></span></a></li>
                         <li><a href="../../../App/Zyrass/Models/medals.php"><i class="fa fa-table" aria-hidden="true"></i> - <span class="text-primary">Liste des <span class="text-warning">médailles</span></span></a></li>
                     </ul>

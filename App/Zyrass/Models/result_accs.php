@@ -9,32 +9,32 @@
 
     /*
     |-------------------------------------------------------------------------------------
-    | Étape 1 : Sélection de tous les monstres afin de les déplacer dans un tableau
+    | Étape 1 : Sélection de tous les accessoires afin de les déplacer dans un tableau
     |-------------------------------------------------------------------------------------
-    |   01 - Sélection du nom du monstre
+    |   01 - Sélection du nom de l'accessoire'
     |-------------------------------------------------------------------------------------
-    | Étape 2 : Sélection de tous les monstres afin de les déplacer dans un tableau
+    | Étape 2 : Sélection de tous les accessoires afin de les déplacer dans un tableau
     |-------------------------------------------------------------------------------------
-    |   02 - Déplacement des monstres dans le tableau $list_mobs
+    |   02 - Déplacement des accessoires dans le tableau $list_accs
     |-------------------------------------------------------------------------------------
     */
     // Étape 1
-    $req = $dsn->prepare('SELECT name FROM monsters WHERE id >= 1');
+    $req = $dsn->prepare('SELECT name FROM accessories WHERE id >= 1');
     $req->execute();
-    $result_mobs = $req->fetchAll();
+    $result_accs = $req->fetchAll();
     $req->closeCursor();
     
     // Étape 2
-    $list_mobs = [];
-    foreach ($result_mobs as $reponse)
+    $list_accs = [];
+    foreach ($result_accs as $reponse)
     {
-        array_push($list_mobs, $reponse['name']);
+        array_push($list_accs, $reponse['name']);
     }
 
-    echo '<input type="hidden" name="<?= $result_mobs->m_id; ?>">';
+    echo '<input type="hidden" name="<?= $result_accs->a_id; ?>">';
 
 
-    if(in_array($monster_name, $list_mobs))
+    if(in_array($accessory_name, $list_accs))
     {
         /*
         |-------------------------------------------------------------------------------------
@@ -49,23 +49,18 @@
         |   07 - Sélection de la quantité de monstre à tuer
         |-------------------------------------------------------------------------------------
         */
+        
         $req = $dsn->prepare(
             'SELECT 
-                monsters.id AS "m_id",
-                monsters.name AS "m_name",
-                monsters.experience AS "m_exp",
-                monsters.gold AS "m_gold",
-                monsters.search AS "m_search",
-                monsters.medal AS "m_medal",
-                monsters.image_monster AS "m_image",
-                monsters.image_medal AS "medal_image",
-                amounts.amount AS "m_amount" /* Affichage de la quantité de mobs à kill */ 
-            FROM monsters
-            INNER JOIN amounts ON amounts.amount_id = monsters.amount_id
-            WHERE monsters.name LIKE "' . $monster_name. '"
+                id AS "a_id",
+                name AS "a_name",
+                effect AS "a_effect",
+                image AS "a_image"
+            FROM accessories
+            WHERE name LIKE "' . $accessory_name. '%"
         ');
         $req->execute();
-        $result_mobs = $req->fetch(PDO::FETCH_OBJ);
+        $result_accs = $req->fetch(PDO::FETCH_OBJ);
         $req->closeCursor();
 
         /*
@@ -79,16 +74,17 @@
         */
         $req = $dsn->prepare(
             'SELECT
+                accessories.name AS "name_accessory",
                 monsters.id AS "id_monster",
-                ingredients.name AS "ingredient_name",
-                ingredients.img AS "ingredient_image"
-            FROM monsters_ingredients
-            INNER JOIN monsters ON monsters_ingredients.monsters_id = monsters.id
-            INNER JOIN ingredients ON monsters_ingredients.ingredients_id = ingredients.id
-            WHERE monsters.id = ' . $result_mobs->m_id . '
+                monsters.name AS "name_monster",
+                monsters.image_monster AS "image_monsters"
+            FROM monsters_accessories
+            INNER JOIN monsters ON monsters_accessories.monsters_id = monsters.id
+            INNER JOIN accessories ON monsters_accessories.accessories_id = accessories.id
+            WHERE accessories.id = "' . $result_accs->a_id . '"
         ');
         $req->execute();
-        $result_ingredient_mobs = $req->fetchAll();
+        $result_accessories_mobs = $req->fetchAll();
         $req->closeCursor();
 
         /*
@@ -108,7 +104,7 @@
             FROM monsters_accessories
             INNER JOIN monsters ON monsters_accessories.monsters_id = monsters.id
             INNER JOIN accessories ON monsters_accessories.accessories_id = accessories.id
-            WHERE monsters.id = ' . $result_mobs->m_id . '
+            WHERE monsters.id = ' . $result_accs->a_id . '
         ');
         $req->execute();
         $result_accessory_mobs = $req->fetch(PDO::FETCH_OBJ);
@@ -129,10 +125,10 @@
             FROM monsters_zoneds
             INNER JOIN monsters ON monsters_zoneds.monsters_id = monsters.id
             INNER JOIN zoneds ON monsters_zoneds.zoneds_id = zoneds.id
-            WHERE monsters.id = ' . $result_mobs->m_id . '
+            WHERE monsters.id = ' . $result_accs->a_id . '
         ');
         $req->execute();
-        $result_zoneds_mobs = $req->fetchAll();
+        $result_zoneds_accs = $req->fetchAll();
         $req->closeCursor();
 
         /*
@@ -140,7 +136,7 @@
         | Sélection et affichage du template "phtml"
         |-------------------------------------------------------------------------------------
         */
-        $template = 'result_mobs';
+        $template = 'result_accs';
         include '../../../Public/www/Views/layout.phtml';
     }
 

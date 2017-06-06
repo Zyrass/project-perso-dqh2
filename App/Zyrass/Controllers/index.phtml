@@ -22,19 +22,6 @@
                             <h4 class="modal-title" id="myModalLabel">Rechercher un monstre</h4>
                         </div>
                         <div class="modal-body" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.webp'); background-size: cover ">
-                            <legend class="text-warning">Comment ça marche ?</legend>
-                            <div class="well">
-                                <blockquote class="blockquote">
-                                    <p>Ce moteur de recherche permet de retrouver toutes les informations spécifique d'un certain monstre en particulier.</p>
-                                </blockquote>
-                                <h5>Ce que vous allez retrouver :</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item list-group-item-warning">1 - La fiche du monstre</li>
-                                    <li class="list-group-item list-group-item-warning">2 - La/les ressource(s) que l'on peut récupérer</li>
-                                    <li class="list-group-item list-group-item-warning">3 - L'accessoire que l'ont peut récupérer si il en n'a un</li>
-                                    <li class="list-group-item list-group-item-warning">4 - La zone où le monstre à été vue</li>
-                                </ul>
-                            </div>
                             <legend class="text-warning">Recherche d'un monstre</legend>
                             <form class="form" action="../Models/result_mobs.php" method="POST">
                                 <div class="form-group">
@@ -59,30 +46,17 @@
                             <h4 class="modal-title" id="myModalLabel">Rechercher un accessoire</h4>
                         </div>
                         <div class="modal-body" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.webp'); background-size: cover ">
-                            <legend class="text-warning">Comment ça marche ?</legend>
-                            <div class="well">
-                                <blockquote class="blockquote">
-                                    <p>Ce moteur de recherche permet de retrouver toutes les informations spécifique d'un certain accessoire en particulier.</p>
-                                </blockquote>
-                                <h5>Ce que vous allez retrouver :</h5>
-                                <ul class="list-group">
-                                    <li class="list-group-item list-group-item-warning">1 - La fiche de l'accessoire</li>
-                                    <li class="list-group-item list-group-item-warning">2 - Le/les monstre(s) qui permet(tes) d'obtenir cet accessoire</li>
-                                    <li class="list-group-item list-group-item-warning">4 - La zone où le/les monstres à/ont été vue</li>
-                                </ul>
-                            </div>
                             <legend class="text-warning">Recherche d'un accessoire</legend>
-                                    <form class="form">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="En cours de développement.." name="monster_name" disabled="disabled">
-                                                <div class="input-group-btn">
-                                                    <button type="button" class="btn btn-default" disabled="disabled"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                                </div>
+                                <form class="form" action="../Models/result_accs.php" method="POST">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Saisir le nom d'un accessoire.." name="accessory_name">
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
                                             </div>
                                         </div>
-                                    </form>
-                    
+                                    </div>
+                                </form>                    
                             </div>
                         </div>
                     </div>
@@ -97,16 +71,16 @@
                             <h4 class="modal-title" id="myModalLabel">Rechercher un ingrédient</h4>
                         </div>
                         <div class="modal-body" style="background-image: url('../../../Public/www/Views/assets/img/spec_bg_pc.webp'); background-size: cover ">
-                                    <form class="form">
-                                        <div class="form-group">
-                                            <div class="input-group">
-                                                <input type="text" class="form-control" placeholder="En cours de développement.." name="monster_name" disabled="disabled">
-                                                <div class="input-group-btn">
-                                                    <button type="button" class="btn btn-default" disabled="disabled"><i class="fa fa-search" aria-hidden="true"></i></button>
-                                                </div>
+                                <form class="form" action="../Models/result_ingre.php" method="POST">
+                                    <div class="form-group">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Saisir le nom d'un ingrédient.." name="ingredient_name">
+                                            <div class="input-group-btn">
+                                                <button type="submit" class="btn btn-default"><i class="fa fa-search" aria-hidden="true"></i></button>
                                             </div>
                                         </div>
-                                    </form>
+                                    </div>
+                                </form>
                     
                             </div>
                         </div>
@@ -121,25 +95,25 @@
                     <div>
                         <img src="../../../Public/www/Views/assets/img/test/1.png" alt="" id="imagePersoHome" class="visible-lg visible-md one">
                     </div>
-                    <p class="wow fadeIn">Dragon Quest Heroes 2<br />Ce jeu est prenant. Mais il faut l'avoué, si nous ne sommes pas un minimum organisé, rechercher un type de monstre spécifique sera un véritable cauchemard... </p>
+                    <p class="wow fadeIn">Dragon Quest Heroes 2<br />Ce jeu est prenant. Mais il faut l'avouer,si l'on n’est pas un minimum organisé, rechercher un type de monstre est véritablement un parcours du combatant.... </p>
                 </div>
                 <div class="col-md-4 col-md-offset-2 styleInfo_home">
                     <div>
                         <img src="../../../Public/www/Views/assets/img/test/2.png" alt="" id="imagePersoHome" class="visible-lg visible-md two">
                     </div>
-                    <p class="wow fadeIn">Courage !!<br />En effet, il vous faudra parcourir chaque map, noter sur une feuille de papier le loot par monstre, sa zone de repop... Je l'ai fait et je ne vous le cache pas, c'est très long et je me dis que certains n'auront pas la patience d'allez jusqu'au bout.</p>
+                    <p class="wow fadeIn">Courage !!<br />En effet, il vous faudra parcourir chaque map, noter sur une feuille de papier le loot par monstre, sa zone de repop... Je l'ai fait et je ne vous le cache pas, c'est très long et je me dis que certains n'auront pas la patience d'aller jusqu'au bout.</p>
                 </div>
                 <div class="col-md-4 col-md-offset-1 styleInfo_home">
                     <div>
                         <img src="../../../Public/www/Views/assets/img/test/3.png" alt="" id="imagePersoHome" class="visible-lg visible-md three">
                     </div>
-                    <p class="wow fadeIn">Partage !!<br />C'est donc pour celà que j'ai tenu à rédigé ce site 'perso' afin d'aider un très grand nombre de personne. Bien entendu ce ne sont que des informations que j'ai obtenu en jouant. Cepandant des joueurs m'ont donner des informations précieuse que je n'avais pas et sans eux le site ne serait pas ce qu'il est aujourd'hui.</p>
+                    <p class="wow fadeIn">Partage !!<br />C'est pour cela que j'ai tenu à rédiger ce site 'perso' afin d'aider un très grand nombre de personne. Bien entendu ce ne sont que des informations que j'ai obtenu en jouant. Cepandant des joueurs m'ont donner des informations précieuses que je n'avais pas et sans eux le site ne serait pas ce qu'il est aujourd'hui.</p>
                 </div>
                 <div class="col-md-4 col-md-offset-2 styleInfo_home">
                     <div>
                         <img src="../../../Public/www/Views/assets/img/test/4.png" alt="" id="imagePersoHome" class="visible-lg visible-md four">
                     </div>
-                    <p class="wow fadeIn">Gratuit !!<br />Et oui ce que je propose restera entièrement gratuit. Il est hors de question pour moi de faire du profit sur ce site. La seule chose qui m'intéresse c'est la possibilité de proposer mon projet pour un futur emploi.</p>
+                    <p class="wow fadeIn">Gratuit !!<br />Eh oui, ce que je propose reste entièrement gratuit. Il est hors de question de faire du profit sur ce site. La seule chose qui m'intéresse est la possibilité de proposer mon projet pour un futur emploi.</p>
                 </div>            
             </diV>
         </div>
