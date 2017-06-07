@@ -31,7 +31,7 @@ $(document).ready(function() {
 
     $('#myAffix').affix({
     offset:  {
-        top: 400,
+        top: 100,
         bottom: function () {
         return (this.bottom = $('.footer').outerHeight(true))
         }
