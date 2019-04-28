@@ -28,8 +28,8 @@
             SUM(monsters.gold) AS "s_gold",
             COUNT(monsters.id) AS "c_id"
         FROM `monsters_zoneds` 
-        INNER JOIN monsters ON monsters.id = monsters_id      
-        INNER JOIN zoneds On zoneds.id = zoneds_id
+        INNER JOIN monsters ON monsters.id = monster_id      
+        INNER JOIN zoneds On zoneds.id = zoned_id
         WHERE zoneds.id = 1
         ORDER BY monsters.name
     ');
@@ -65,9 +65,9 @@
             monsters.image_medal AS "medal_image",
             amounts.amount AS "a_amount"
         FROM `monsters_zoneds` 
-        INNER JOIN monsters ON monsters.id = monsters_id        
+        INNER JOIN monsters ON monsters.id = monster_id        
         INNER JOIN amounts ON amounts.amount_id = monsters.amount_id        
-        INNER JOIN zoneds On zoneds.id = zoneds_id
+        INNER JOIN zoneds On zoneds.id = zoned_id
         WHERE zoneds.id = 1
         ORDER BY monsters.name
     ');
